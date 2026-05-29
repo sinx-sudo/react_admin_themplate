@@ -5,7 +5,7 @@ const NavbarLeft = ({ isOpen, setIsOpen }:{isOpen:boolean, setIsOpen:React.Dispa
   return (
     <div
       className={`
-    fixed top-0 left-0 h-screen w-64
+    fixed top-0 left-0 h-screen w-64 z-50
     bg-gray-800 text-white p-4
     transform transition-transform duration-300
     ${isOpen ? "translate-x-0" : "-translate-x-52"} 
@@ -30,12 +30,10 @@ const NavbarLeft = ({ isOpen, setIsOpen }:{isOpen:boolean, setIsOpen:React.Dispa
         <House /><Link to="/">Home</Link>
         </div>
         <div className="flex gap-3">
-        <Notebook />
-        <Link to="/contact">Contact</Link>
+        <Notebook/><Link to="/contact">Contact</Link>
         </div>
         <div className="flex gap-3">
-        <User2/>
-        <Link to="/user">User</Link>
+        <User2/><Link to="/user">User</Link>
         </div>
       </nav>
     </div>

@@ -9,7 +9,7 @@ export default function RootLayout() {
     <div className="flex">
       <NavbarLeft isOpen={isOpen} setIsOpen={setIsOpen} />
 
-      <section className={`flex-1 p-4 transition-all duration-300
+      <section className={`flex-1 p-4 transition-all duration-300 overflow-hidden
   ${isOpen ? "ml-64" : "ml-12"}`}>
         {/* ml-0 */}
         <Outlet />
