@@ -30,45 +30,43 @@ const User = () => {
   if (error) return <p>Error...</p>;
   return (
     <>
-      <div className="flex justify-between">
-        <h3>USER</h3>
+      <div className="flex justify-between py-2">
+        <h3 className="font-bold text-2xl">USER</h3>
          {/* ปุ่มเปิด modal */}
         <button
           onClick={() => setIsOpen(true)}
           className="rounded-lg bg-red-500 px-4 py-2 text-white"
         >
-          เปิด Modal
+            Create user
         </button>
       </div> <hr />
       <div>
         <div className="overflow-x-auto">
-          <table className="min-w-full overflow-hidden rounded-2xl">
+          <table className="">
             <thead>
-              <tr className="bg-gray-100 text-left text-sm uppercase text-gray-600">
-                <th className="px-6 py-4 whitespace-nowrap">ID</th>
-                <th className="px-6 py-4 whitespace-nowrap">Name</th>
-                <th className="px-6 py-4 whitespace-nowrap">PHONE</th>
-                <th className="px-6 py-4 whitespace-nowrap">DEPARTMENT</th>
-                <th className="px-6 py-4 whitespace-nowrap text-center">Actions</th>
+              <tr className="">
+                <th className="">ID</th>
+                <th className="">Name</th>
+                <th className="">PHONE</th>
+                <th className="">DEPARTMENT</th>
+                <th className="text-center">Actions</th>
               </tr>
             </thead>
 
             <tbody>
               {data?.users?.map((user: any, index: number) => (
-                <tr className="border-b hover:bg-gray-50"
+                <tr className=""
                   key={user.id}>
-                  <td className="px-6 py-4 font-medium text-gray-700">
+                  <td className="">
                     {index + 1}
                   </td>
 
-                  <td className="px-6 py-4 text-gray-800">{user.name}</td>
+                  <td className="">{user.name}</td>
 
-                  <td className="px-6 py-4 text-gray-600">{user.phone}</td>
+                  <td className="">{user.phone}</td>
 
                   <td className="px-6 py-4">
-                    <span className="rounded-lg bg-purple-100 px-3 py-1 text-sm font-medium text-purple-700">
                       {user.department.name}
-                    </span>
                   </td>
                   <td className="px-6 py-4">
                     <div className="flex items-center justify-center gap-2">
@@ -91,12 +89,12 @@ const User = () => {
 
       <div className="p-10">
         {/* ปุ่มเปิด modal */}
-        <button
+        {/* <button
           onClick={() => setIsOpen(true)}
           className="rounded-lg bg-blue-500 px-4 py-2 text-white"
         >
           เปิด Modal
-        </button>
+        </button> */}
 
         {/* เรียกใช้ Modal */}
         <Modal
